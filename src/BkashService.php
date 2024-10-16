@@ -27,12 +27,13 @@ class BkashService
     private string $base_url;
 
     /**
-     * Set configuration
-     * @param array $config
+     * Set configuration in constructor
      * @throws Exception
      */
-    public function setConfig(array $config)
+    public function __construct()
     {
+        $config = config('bkash');
+
         if (!array_key_exists('environment', $config)) {
             throw new Exception('Environment parameter is required');
         }
@@ -51,6 +52,7 @@ class BkashService
         }
 
         unset($config['environment']);
+
         $this->bkash_config = $config;
     }
 
