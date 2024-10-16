@@ -1,0 +1,36 @@
+{
+    "name": "pranaycb/laravel-bkash",
+    "description": "A Bkash payment gateway package for Laravel.",
+    "type": "library",
+    "keywords": [
+        "bkash",
+        "pranaycb-bkash",
+        "pranaycb-laravel-bkash",
+        "bkash-payment-gateway",
+        "bkash-payment",
+        "laravel-bkash",
+        "laravel-bkash-payment"
+    ],
+    "require": {
+        "php": "^7.4|^8.0|^8.1|^8.2",
+        "illuminate/support": "^6|^7|^8|^9|^10"
+    },
+    "autoload": {
+        "psr-4": {
+            "PranayCb\\LaravelBkash\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pranay Chakraborty",
+            "email": "pranaycb.ctg@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PranayCb\\LaravelBkash\\BkashServiceProvider"
+            ]
+        }
+    }
+}
